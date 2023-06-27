@@ -35,22 +35,22 @@ void secondwindow::adding() {
         randomcode += characters[randomIndex];
     }
 
-    auto encryptvalue = crypto::encrypt(randomcode.toUtf8(), pinCode, pinCode);
+    QByteArray encryptvalue = crypto::encrypt(randomcode.toUtf8(), pinCode, pinCode);
 
     valueinbuttons.append(encryptvalue);
-    addCard(encryptvalue);
+    addCard();
 }
 
-void secondwindow::addCard(QString card)
+void secondwindow::addCard()
 {
-    auto listItemW = new QListWidgetItem();
-    auto itemW = new CardWidget(pinCode, card, this);
+    QListWidgetItem* table = new QListWidgetItem();
+    CardWidget* cards = new CardWidget(pinCode, valueinbuttons.last(), this);
 
-    listItemW->setSizeHint(itemW->sizeHint());
+    table->setSizeHint(cards->sizeHint());
 
-    ui->listWidget->addItem(listItemW);
+    ui->listWidget->addItem(table);
 
-    ui->listWidget->setItemWidget(listItemW, itemW);
+    ui->listWidget->setItemWidget(table, cards);
 }
 
 void secondwindow::on_pushButton_clicked() {

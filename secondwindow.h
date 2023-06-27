@@ -23,7 +23,7 @@ signals:
     void firstWindow();
 private slots:
     void adding();
-    void addCard(QString promo);
+    void addCard();
     void on_pushButton_clicked();
 
 private:
