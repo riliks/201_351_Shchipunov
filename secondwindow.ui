@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>promocodes</class>
+ <widget class="QWidget" name="promocodes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>362</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Промокоды нахаляву</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QListWidget" name="listWidget">
+     <property name="minimumSize">
+      <size>
+       <width>240</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>230</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="isWrapping" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="resizeMode">
+      <enum>QListView::Adjust</enum>
+     </property>
+     <property name="viewMode">
+      <enum>QListView::IconMode</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+}</string>
+     </property>
+     <property name="text">
+      <string>Открыть код</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
